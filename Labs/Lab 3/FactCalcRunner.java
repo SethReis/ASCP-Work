@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class FactCalcRunner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Seth Reis
+ * Lab 3
  */
 public class FactCalcRunner
 {

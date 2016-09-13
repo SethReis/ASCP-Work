@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class SimpleCalcRunner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Seth Reis 
+ * Lab 2
  */
 public class SimpleCalcRunner
 {

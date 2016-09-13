@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class FisrtClassRunner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Seth Reis
+ * Lab 1
  */
 public class FisrtClassRunner
 {
