@@ -18,16 +18,17 @@ public class BallRunner
     }
     
     public int findFreeBallBotIndex(){
-        for (int i = 0; i < ballBotArray.length; i++){
+        int get = 0;
+        for(int i = 0; i < ballBotArray.length; i++){
             if(ballBotArray[i] == null){
-                return 1;
+                get = i;
             }
             else{
-                return ballBotArray.length;
+                get = ballBotArray.length;
             }
         }
-        return 0;
-    }
+        return get;
+    } 
     
     public static void activity1(){
        BallWorld ballWorld = new BallWorld(200, 200);
@@ -42,5 +43,9 @@ public class BallRunner
                 bb.setHeading(bb.getHeading()+90);
             }
         }
+    }
+    
+    public static void activity2() {
+        
     }
 }
