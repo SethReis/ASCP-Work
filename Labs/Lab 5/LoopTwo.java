@@ -7,7 +7,8 @@
  */
 public class LoopTwo
 {
-     int[] nums = new int[10];
+    double total = new double;
+    int[] nums = new int[10];
     
     public LoopTwo() 
     {
@@ -17,7 +18,7 @@ public class LoopTwo
     public void loadRandom() 
     {
         int var = 0;
-        for (int i = 0; i < 10; i++) 
+        for (int i = 0; i < length; i++) 
         {
            var = (int) (Math.random()*10);
            nums[i] = var;
@@ -31,14 +32,19 @@ public class LoopTwo
     
     public void printArray() 
     {
-      for (int i = 0; i < 10; i++) 
+      for (int i = 0; i < nums.length; i++) 
         {
            System.out.print("" + nums[i] + "\t");
         }
     }
     
-    public string findAverage()
+    public void findAverage()
     {
-        System.out.println("The average of these numbers is" +; //Ask a question here too
+        double total = 0.0
+        for(int i = 0; i < nums.length; i++) {
+           total = total + nums[i];
+        }
+        total = total / 10
+        System.out.println("The average of these numbers is" + total; //Ask a question here too
     }
 }
