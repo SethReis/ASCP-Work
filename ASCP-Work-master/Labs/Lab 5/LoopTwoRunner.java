@@ -13,5 +13,6 @@ public class LoopTwoRunner
        loopTwo.loadRandom();
        loopTwo.sortArray();
        loopTwo.printArray();
+       loopTwo.findAverage();
     }
 }
