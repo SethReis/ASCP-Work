@@ -9,44 +9,41 @@ public class BallRunner
 {    
     BallWorld ballWorld = new BallWorld(500, 500);
     TGPoint entrancePoint = new TGPoint(0,0);
-    BallBot ballBotArray[] = new BallBot[12];//(ballWorld, entrancePoint, 0, 25)
-   
-    private double heading;
+    BallBot ballBotArray[];//(ballWorld, entrancePoint, 0, 25)
     
-    public BallRunner(){
-        BallWorld ballWorld = new BallWorld(500, 500);
-        TGPoint entrancePoint = new TGPoint(0, 0);
-        int ballBotArrayLength = 12;
+    public BallRunner(BallWorld bw, TGPoint tgp, int length){
+        ballWorld = bw;
+        entrancePoint = tgp;
+        BallBot ballBotArray[] = new BallBot[length];
     }
     
-    public static void activity1(){
-       BallWorld ballWorld = new BallWorld(200, 200);
-       TGPoint tGPoint = new TGPoint();
-       BallBot bb = new BallBot(ballWorld, tGPoint, 0, 25);
-       while (true) {
-           if (bb.canMoveForward(ballWorld)) {
-               bb.moveForward();
-            }
-            else{
-                bb.setHeading((bb.getHeading()%360)+90);
-            }
-        }
-    }
-    
-    public int findFreeBallBotIndex(){
-        int get = 0;
+    private int findFreeBallBotIndex(){
         for(int i = 0; i < ballBotArray.length; i++){
             if(ballBotArray[i] == null){
-                get = i;
-            }
-            else{
-                get = ballBotArray.length;
+                return i;
             }
         }
-        return get;
+        return ballBotArray.length;
     } 
     
-    public static void activity2() {
-       BallWorld ballWorld = new BallWorld(200, 200);
+    public static void activity2(){
+       BallWorld ballWorld = new BallWorld(500, 500);
+       BallRunner br = new BallRunner(ballWorld, new TGPoint(0, 0), 12);
+       br.loop();
+    }
+    
+    public void loop() {
+       while(findFreeBallBotIndex() < ballBotArray.length) {
+           ballBotArray[findFreeBallBotIndex()] = new BallBot(ballWorld, entrancePoint, 0, 25);
+      }
+       
+       for(int i = 0; i < ballBotArray.length; i++) {
+           if (ballBotArray[i] != null && ballBotArray[i].canMoveForward(ballWorld)) {
+               ballBotArray[i].moveForward();
+           }
+           else{
+                ballBotArray[i].setHeading((ballBotArray[i].getHeading()%360)+90);
+           }
+       }
     }
 }

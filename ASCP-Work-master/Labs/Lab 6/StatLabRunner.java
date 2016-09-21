@@ -13,7 +13,7 @@ public class StatLabRunner
        statLab.loadRandom();
        statLab.sortArray();
        statLab.printArray();
-       statLab.findAverage();
-       statLab.getMedian();
+       System.out.println("\n" + statLab.findAverage());
+       System.out.println("\n" + statLab.getMedian());
     }
 }
