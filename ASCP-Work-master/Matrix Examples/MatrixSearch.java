@@ -14,13 +14,16 @@ public class MatrixSearch
 	public static int searchMat( int[][] mat, int toFind)
 	{
 		int total = 0;
-		for(int row = 0; row < twoDRay.length; row++){
-		    for(int col = 0; col < twoDRay[row].length; col++) {
-		        if 
+		for(int row = 0; row < mat.length; row++){
+		    for(int col = 0; col < mat[row].length; col++) {
+		        if (mat[row][col] == 7)
+		        {
+		            total = total + 1;
+		        }
 		    }
 		}
 	    
-	    return 0;
+	    return total;
 	}
 
 	public static void main(String args[])
