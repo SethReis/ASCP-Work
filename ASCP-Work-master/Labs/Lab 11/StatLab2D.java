@@ -35,20 +35,31 @@ public class StatLab2D
         }
     }
     
-     public void sortArray2D()
-    {
-        int nums = new int[nums2D.length * nems2D[0].length];
-        for(int i = 0; i < nums2D.length; i++){
-            nums[i] = nums2D[row][col]
+    public void sortArray2D()
+    {  
+       int[] nums = new int[nums2D.length * nums2D[0].length];
+       int i = 0;
+       for(int row = 0; row < nums2D.length; row++){
+            for(int col = 0; col < nums2D[row].length; col++){
+                nums[i] = nums2D[row][col];
+                i++;
+            }
         }
-        Arrays.sort(nums);
+       Arrays.sort(nums);
+       i = 0;
+       for(int row = 0; row < nums2D.length; row++){
+            for(int col = 0; col < nums2D[row].length; col++){
+                nums2D[row][col] = nums[i];
+                i++;
+            }
+        }
     }
     
     public int findAverage2D()
     {
         int ave = 0;
         for(int row = 0; row < nums2D.length; row++){
-            for(int col = 0; col < nums2D[i].length; col++){
+            for(int col = 0; col < nums2D[row].length; col++){
                 ave = ave + nums2D[row][col];
             }
         }
