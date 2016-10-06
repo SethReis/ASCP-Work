@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CountOddEven()
+comment1.params=
+comment1.target=void\ loadArray()
+comment2.params=
+comment2.target=void\ countEvensAndOdds()
+comment3.params=
+comment3.target=int\ getOdds()
+comment4.params=
+comment4.target=int\ getEvens()
+comment5.params=
+comment5.target=void\ printResults()
+numComments=6
